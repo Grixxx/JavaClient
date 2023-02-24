@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #DB7093;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller.UserPanelController">
+   <children>
+      <AnchorPane prefHeight="66.0" prefWidth="600.0" style="-fx-background-color: #9400D3;">
+         <children>
+            <Label layoutX="162.0" layoutY="10.0" prefHeight="46.0" prefWidth="371.0" text="МЕНЮ ПОЛЬЗОВАТЕЛЯ" textFill="WHITE">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Label>
+            <Button fx:id="exitButton" layoutX="14.0" layoutY="10.0" mnemonicParsing="false" onAction="#backAutorPanel" prefHeight="15.0" prefWidth="69.0" text="Назад">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Button fx:id="salaryEntryButton" layoutX="145.0" layoutY="120.0" mnemonicParsing="false" onAction="#showSpecialtie" prefHeight="43.0" prefWidth="359.0" text="Стать работником и выбрать вакансию (или изменить) ">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="infoUserButton" layoutX="145.0" layoutY="179.0" mnemonicParsing="false" onAction="#infoUser" prefHeight="43.0" prefWidth="359.0" text="Вывести информацию об аккаунте">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Label layoutX="102.0" layoutY="126.0" text="1.">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="102.0" layoutY="241.0" text="3.">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="102.0" layoutY="185.0" text="2.">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Button fx:id="salaryEntryButton1" layoutX="145.0" layoutY="235.0" mnemonicParsing="false" onAction="#showResultSalary" prefHeight="43.0" prefWidth="359.0" text="Посмотреть информацию о своей ЗП">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Label fx:id="specialtieNameLable" layoutX="235.0" layoutY="78.0" prefHeight="31.0" prefWidth="179.0" textFill="#fcfcfc">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="96.0" layoutY="303.0" />
+      <Label layoutX="102.0" layoutY="296.0" text="4.">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Button fx:id="salaryEntryButton11" layoutX="145.0" layoutY="290.0" mnemonicParsing="false" onAction="#deleteEmployee" prefHeight="43.0" prefWidth="359.0" text="Уволиться">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

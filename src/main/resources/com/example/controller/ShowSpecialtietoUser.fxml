@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="312.0" prefWidth="603.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller.ShowSpecialtietoUserController">
+    <children>
+        <TableView fx:id="tableView" layoutX="1.0" layoutY="-1.0" prefHeight="218.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="idSpecialtieColumn" prefWidth="131.0" text="idВакансии" />
+                <TableColumn fx:id="specialtieNameColumn" prefWidth="468.0" text="Название вакансии" />
+            </columns>
+        </TableView>
+        <Button layoutX="14.0" layoutY="276.0" mnemonicParsing="false" onAction="#backUserPanel" text="Назад" />
+      <Button layoutX="217.0" layoutY="227.0" mnemonicParsing="false" onAction="#addSpecialtieToEmployee" prefHeight="25.0" prefWidth="130.0" text="Выбрать вакансию" />
+    </children>
+</AnchorPane>

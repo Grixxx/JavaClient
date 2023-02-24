@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="720.0" style="-fx-background-color: #B0C4DE;" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller.AdminPanelController">
+  <tabs>
+    <Tab text="Users">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #B0C4DE;">
+               <children>
+                  <TableView fx:id="tableViewUsers" prefHeight="420.0" prefWidth="635.0" style="-fx-background-color: #F5F5F5;">
+                    <columns>
+                      <TableColumn fx:id="idUsersColumn" prefWidth="45.0" text="idUser" />
+                      <TableColumn fx:id="fNameUsersColumn" prefWidth="97.0" text="Имя" />
+                        <TableColumn fx:id="lNameUsersColumn" prefWidth="125.0" text="Фамилия" />
+                        <TableColumn fx:id="loginUsersColumn" prefWidth="120.0" text="Логин" />
+                        <TableColumn fx:id="passwordUsersColumn" prefWidth="133.0" text="Пароль" />
+                        <TableColumn fx:id="roleUserColumn" prefWidth="94.0" text="Роль" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="updateButton" layoutX="635.0" layoutY="61.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" text="Обновить" />
+                  <Button fx:id="deleteUserButton" layoutX="214.0" layoutY="431.0" mnemonicParsing="false" onAction="#deleteSelectedUserAction" prefHeight="25.0" prefWidth="146.0" text="Удалить пользователь" />
+                  <Button fx:id="addUserButton" layoutX="40.0" layoutY="431.0" mnemonicParsing="false" onAction="#addUserInAdminTable" text="Добавить пользователя " />
+                  <Separator layoutX="404.0" layoutY="421.0" orientation="VERTICAL" prefHeight="72.0" prefWidth="7.0" />
+                  <Button fx:id="addEmployeeButton" layoutX="466.0" layoutY="431.0" mnemonicParsing="false" onAction="#addSelectedEmployeerAction" prefHeight="25.0" prefWidth="136.0" text="Сделать работником" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Работники">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="464.0" prefWidth="708.0">
+               <children>
+                  <TableView fx:id="tableViewEmployee" layoutX="1.0" layoutY="-2.0" prefHeight="370.0" prefWidth="615.0">
+                    <columns>
+                      <TableColumn fx:id="idEmployeeColumn" prefWidth="94.0" text="idРаботник" />
+                      <TableColumn fx:id="idUserFKemployeeColumn" prefWidth="71.0" text="idUser" />
+                        <TableColumn fx:id="idSpecialtieFKemployeeColumn" prefWidth="105.0" text="idВакансии" />
+                        <TableColumn fx:id="resultSalaryColumn" prefWidth="153.0" text="Зарплата сотрудника" />
+                        <TableColumn fx:id="monthlyTariffRateColumn" prefWidth="186.0" text="Месячная тарифная ставка " />
+                    </columns>
+                  </TableView>
+                  <Separator layoutX="616.0" layoutY="102.0" prefHeight="8.0" prefWidth="106.0" style="-fx-background-color: #000000;" />
+                  <Button fx:id="updateButton1" layoutX="622.0" layoutY="46.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="79.0" text="Обновить" />
+                  <TextField fx:id="addIdEmployeeforUseSalary" layoutX="251.0" layoutY="372.0" prefHeight="25.0" prefWidth="162.0" promptText="Введите ID работника" />
+                  <Button fx:id="timeSalaryButton" layoutX="25.0" layoutY="410.0" mnemonicParsing="false" onAction="#AddInfoAboutTimeSalaryEmployee" text="Простая-повременная" />
+                  <Label layoutX="33.0" layoutY="376.0" prefHeight="17.0" prefWidth="125.0" text="Рассчитать ЗП" textFill="#140101">
+                     <font>
+                        <Font name="Bookshelf Symbol 7" size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="timeWithPremiumSalaryButton" layoutX="11.0" layoutY="448.0" mnemonicParsing="false" onAction="#AddInfoAboutTimePremiumSalaryEmployee" text="Повременная-премиальная" />
+                  <Button fx:id="directPieceworkSalaryButton" layoutX="191.0" layoutY="410.0" mnemonicParsing="false" onAction="#addInfoStraightPieceworkSalary" text="Прямая сдельная" />
+                  <Button fx:id="directWithPremiumPieceworkSalaryButton" layoutX="195.0" layoutY="448.0" mnemonicParsing="false" onAction="#addInfoPremiumPieceworkSalary" text="Сдеально-премиальная" />
+                  <Button fx:id="pieceProgressiveSalaryButton" layoutX="341.0" layoutY="410.0" mnemonicParsing="false" onAction="#addInfoProgressivePieceworkSalary" text="Сдельно-прогресивная" />
+                  <Button fx:id="indirectPieceworkSalaryButton" layoutX="362.0" layoutY="448.0" mnemonicParsing="false" onAction="#addInfoIndirectPieceworkSalary" text="Косвенно-сдельная" />
+                  <Button layoutX="520.0" layoutY="410.0" mnemonicParsing="false" onAction="#addInfoAccordPieceworksalary" prefHeight="25.0" prefWidth="94.0" text="Аккордная" />
+                  <Button layoutX="499.0" layoutY="448.0" mnemonicParsing="false" onAction="#addInfoAccordPremiumPieceworksalary" prefHeight="25.0" prefWidth="161.0" text="Аккордно-премиальная" />
+                  <Button layoutX="630.0" layoutY="158.0" mnemonicParsing="false" onAction="#deleteEmployee" text="Уволить" />
+                  <Button layoutX="486.0" layoutY="372.0" mnemonicParsing="false" onAction="#addInfomonthlyTariffRate" prefHeight="25.0" prefWidth="209.0" text="Месячная тарифная ставка" />
+                  <Separator layoutX="617.0" layoutY="306.0" prefHeight="9.0" prefWidth="105.0" />
+               </children></AnchorPane>
+         </content>
+      </Tab>
+    <Tab text="Вакансии">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="453.0" prefWidth="719.0">
+               <children>
+                  <TableView fx:id="tableViewSpecialtie" layoutX="1.0" layoutY="-1.0" prefHeight="394.0" prefWidth="603.0">
+                    <columns>
+                      <TableColumn fx:id="idSpecialtieColumn" prefWidth="112.0" text="idВакансии" />
+                      <TableColumn fx:id="specialtieNameColumn" prefWidth="501.0" text="Название вакансии" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="addSpecialtieButton" layoutX="62.0" layoutY="435.0" mnemonicParsing="false" onAction="#addSpecialtie" text="Добавить вакансию" />
+                  <Button fx:id="delSpecialtieButton" layoutX="263.0" layoutY="413.0" mnemonicParsing="false" onAction="#deleteSpecialtie" prefHeight="25.0" prefWidth="123.0" text="Удалить вакансию" />
+                  <Button fx:id="updateButton2" layoutX="608.0" layoutY="39.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="100.0" text="Обновить" />
+                  <Button fx:id="addSpecialtieToEmployeeButton" layoutX="449.0" layoutY="435.0" mnemonicParsing="false" onAction="#addSpecialtieToEmployee" text="Присвоить вакансию работнику " />
+                  <Separator layoutX="254.0" layoutY="389.0" orientation="VERTICAL" prefHeight="99.0" prefWidth="9.0" />
+                  <TextField fx:id="addSpecialtieTextField" layoutX="28.0" layoutY="401.0" prefHeight="25.0" prefWidth="210.0" promptText="Введите название вакансии" />
+                  <Separator layoutX="395.0" layoutY="387.0" orientation="VERTICAL" prefHeight="104.0" prefWidth="9.0" />
+                  <TextField fx:id="addIDemployeeInSpecialtieField" layoutX="404.0" layoutY="401.0" prefHeight="22.0" prefWidth="136.0" promptText="Введите ID работника" />
+                  <TextField fx:id="addIDSpecialtieWihtEmloyField" layoutX="565.0" layoutY="401.0" prefHeight="25.0" prefWidth="130.0" promptText="Введите ID вакансии" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>

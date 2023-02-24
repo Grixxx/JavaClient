@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller.AddInfoAboutTimePremiumSalaryEmployeeController">
+    <children>
+        <TextField fx:id="oneTextField" layoutX="196.0" layoutY="119.0" prefHeight="25.0" prefWidth="195.0" />
+        <TextField fx:id="twoTextFild" layoutX="199.0" layoutY="188.0" prefHeight="25.0" prefWidth="195.0" />
+        <TextField fx:id="threeTextField" layoutX="199.0" layoutY="258.0" prefHeight="25.0" prefWidth="195.0" />
+        <Label fx:id="paymentPerHourLable" layoutX="204.0" layoutY="96.0" prefHeight="17.0" prefWidth="176.0" text="Введите оплату за час работы" />
+        <Label fx:id="hoursTimeSalaryLable" layoutX="182.0" layoutY="164.0" prefHeight="17.0" prefWidth="307.0" text="Введите, сколько всего часов отработал работник" />
+        <Label fx:id="premiumTimeSalaryLable" layoutX="181.0" layoutY="234.0" prefHeight="17.0" prefWidth="283.0" text="Введите процент  премии сотрудника (макс 100)" />
+        <Button fx:id="calculateSalaryButton" layoutX="209.0" layoutY="299.0" mnemonicParsing="false" onAction="#calculateSalary" prefHeight="25.0" prefWidth="176.0" text="Рассчитать ЗП" />
+    </children>
+</AnchorPane>

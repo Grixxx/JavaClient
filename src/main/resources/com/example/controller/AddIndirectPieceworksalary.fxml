@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="393.0" prefWidth="597.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller.AddIndirectPieceworksalaryController">
+    <children>
+        <TextField fx:id="oneTextField" layoutX="186.0" layoutY="31.0" prefHeight="25.0" prefWidth="195.0" />
+        <TextField fx:id="twoTextFild" layoutX="186.0" layoutY="87.0" prefHeight="25.0" prefWidth="195.0" />
+        <Label fx:id="paymentPerHourLable" layoutX="144.0" layoutY="6.0" prefHeight="17.0" prefWidth="362.0" text="Введите часовую тарифную ставку вспомог. рабочего (Т(в)ч)" />
+        <Label fx:id="hoursTimeSalaryLable" layoutX="142.0" layoutY="70.0" prefHeight="17.0" prefWidth="355.0" text="Введите норму обслуживания для вспог. раб.  (Н(в)обс)" />
+        <Button fx:id="calculateSalaryButton" layoutX="196.0" layoutY="333.0" mnemonicParsing="false" onAction="#calculateSalary" prefHeight="25.0" prefWidth="176.0" text="Рассчитать ЗП" />
+        <TextField fx:id="threeTextField" layoutX="187.0" layoutY="144.0" prefHeight="25.0" prefWidth="195.0" />
+        <Label fx:id="hoursTimeSalaryLable1" layoutX="29.0" layoutY="183.0" prefHeight="17.0" prefWidth="530.0" text="Введите количество наименований изделий, в производстве которых участвовал рабочий (m)" />
+        <TextField fx:id="fourTextField" layoutX="186.0" layoutY="200.0" prefHeight="25.0" prefWidth="195.0" />
+        <Label fx:id="hoursTimeSalaryLable11" layoutX="127.0" layoutY="127.0" prefHeight="17.0" prefWidth="316.0" text="Введите норму выработки изделий осн. раб. (Н(о)выб)" />
+        <TextField fx:id="fiveTextField" layoutX="186.0" layoutY="248.0" prefHeight="25.0" prefWidth="195.0" />
+        <Label fx:id="hoursTimeSalaryLable1111" layoutX="141.0" layoutY="231.0" prefHeight="17.0" prefWidth="316.0" text="Введите количество изделий наименования (Ni)" />
+    </children>
+</AnchorPane>

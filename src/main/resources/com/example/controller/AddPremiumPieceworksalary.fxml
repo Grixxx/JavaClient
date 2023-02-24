@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="443.0" prefWidth="597.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller.AddPremiumPieceworksalaryController">
+    <children>
+        <TextField fx:id="oneTextField" layoutX="186.0" layoutY="31.0" prefHeight="25.0" prefWidth="195.0" />
+        <TextField fx:id="twoTextFild" layoutX="186.0" layoutY="87.0" prefHeight="25.0" prefWidth="195.0" />
+        <Label fx:id="paymentPerHourLable" layoutX="167.0" layoutY="6.0" prefHeight="8.0" prefWidth="266.0" text="Введите часовую тарифную ставку (Тч)" />
+        <Label fx:id="hoursTimeSalaryLable" layoutX="173.0" layoutY="62.0" prefHeight="17.0" prefWidth="224.0" text="Введите норму выработки (Нвыр)" />
+        <Button fx:id="calculateSalaryButton" layoutX="196.0" layoutY="404.0" mnemonicParsing="false" onAction="#calculateSalary" prefHeight="25.0" prefWidth="176.0" text="Рассчитать ЗП" />
+        <TextField fx:id="threeTextField" layoutX="187.0" layoutY="144.0" prefHeight="25.0" prefWidth="195.0" />
+        <Label fx:id="hoursTimeSalaryLable1" layoutX="41.0" layoutY="121.0" prefHeight="17.0" prefWidth="530.0" text="Введите количество наименований изделий, в производстве которых участвовал рабочий (m)" />
+        <TextField fx:id="fourTextField" layoutX="186.0" layoutY="200.0" prefHeight="25.0" prefWidth="195.0" />
+        <Label fx:id="hoursTimeSalaryLable11" layoutX="142.0" layoutY="175.0" prefHeight="17.0" prefWidth="316.0" text="Введите количество изделий  наименования (Ni)" />
+      <Label fx:id="hoursTimeSalaryLable111" layoutX="101.0" layoutY="231.0" prefHeight="17.0" prefWidth="399.0" text="Введите процент премии за выполнение планового задания (П1)" />
+      <TextField fx:id="fiveTextField" layoutX="186.0" layoutY="248.0" prefHeight="25.0" prefWidth="195.0" />
+      <TextField fx:id="sexTextField" layoutX="186.0" layoutY="300.0" prefHeight="25.0" prefWidth="195.0" />
+      <Label fx:id="hoursTimeSalaryLable1111" layoutX="81.0" layoutY="283.0" prefHeight="17.0" prefWidth="530.0" text="Введите процент премии за каждый процент перевыполнения планового задания (П2)" />
+      <Label fx:id="hoursTimeSalaryLable11111" layoutX="123.0" layoutY="325.0" prefHeight="17.0" prefWidth="355.0" text="Введитепроцент перевыполнения планового задания (Ппл)" />
+      <TextField fx:id="sevenTextField" layoutX="186.0" layoutY="342.0" prefHeight="25.0" prefWidth="195.0" />
+    </children>
+</AnchorPane>

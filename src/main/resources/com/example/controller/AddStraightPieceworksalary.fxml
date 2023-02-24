@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller.AddStraightPieceworksalaryController">
+    <children>
+        <TextField fx:id="oneTextField" layoutX="186.0" layoutY="58.0" prefHeight="25.0" prefWidth="195.0" />
+        <TextField fx:id="twoTextFild" layoutX="186.0" layoutY="124.0" prefHeight="25.0" prefWidth="195.0" />
+        <Label fx:id="paymentPerHourLable" layoutX="174.0" layoutY="27.0" prefHeight="8.0" prefWidth="266.0" text="Введите часовую тарифную ставку (Тч)" />
+        <Label fx:id="hoursTimeSalaryLable" layoutX="187.0" layoutY="92.0" prefHeight="17.0" prefWidth="224.0" text="Введите норму выработки (Нвыр)" />
+        <Button fx:id="calculateSalaryButton" layoutX="196.0" layoutY="300.0" mnemonicParsing="false" onAction="#calculateSalary" prefHeight="25.0" prefWidth="176.0" text="Рассчитать ЗП" />
+      <TextField fx:id="threeTextField" layoutX="186.0" layoutY="188.0" prefHeight="25.0" prefWidth="195.0" />
+      <Label fx:id="hoursTimeSalaryLable1" layoutX="57.0" layoutY="165.0" prefHeight="17.0" prefWidth="530.0" text="Введите количество наименований изделий, в производстве которых участвовал рабочий (m)" />
+      <TextField fx:id="fourTextField" layoutX="187.0" layoutY="252.0" prefHeight="25.0" prefWidth="195.0" />
+      <Label fx:id="hoursTimeSalaryLable11" layoutX="141.0" layoutY="229.0" prefHeight="17.0" prefWidth="316.0" text="Введите количество изделий  наименования (Ni)" />
+    </children>
+</AnchorPane>
